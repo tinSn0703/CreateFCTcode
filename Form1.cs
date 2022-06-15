@@ -65,7 +65,7 @@ namespace CreateFCTcode
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var _SettingFile = new SettingFileXmlController();
+            var _SettingFile = new Setting.SettingFileXmlController();
             _SettingFile.Open(System.IO.Path.GetFullPath(_SettingFile.DefaultFileName));
             _SettingFile.ReadSetting(new SettingProcessXmlForm(_SettingForm));
             InputPath.Text = _SettingForm.InputFilePath;
@@ -76,7 +76,7 @@ namespace CreateFCTcode
 
         private void Form1_Closed(object sender, EventArgs e)
         {
-            var _SettingFile = new SettingFileXmlController(_SettingFilePath);
+            var _SettingFile = new Setting.SettingFileXmlController(_SettingFilePath);
             _SettingFile.WriteSetting(new SettingProcessXmlForm(_SettingForm));
             _SettingFile.Save();
             _SettingFile.Close();
@@ -84,7 +84,7 @@ namespace CreateFCTcode
 
 		private void property_ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-            var _SettingFile = new SettingFileXmlController(_SettingFilePath);
+            var _SettingFile = new Setting.SettingFileXmlController(_SettingFilePath);
             _SettingFile.WriteSetting(new SettingProcessXmlForm(_SettingForm));
             _SettingFile.Save();
             _SettingFile.Close();

@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace CreateFCTcode
 {
 	/// <summary>XMLの設定ファイルから、フォーム上の設定を読み出す方法を表す</summary>
-	public class SettingProcessXmlForm : SettingProcessXml
+	public class SettingProcessXmlForm : Setting.SettingProcessXml
 	{
 		//--------------------------------------------------------------------------------------------------//
 		// field
@@ -33,7 +33,7 @@ namespace CreateFCTcode
 		//--------------------------------------------------------------------------------------------------//
 		/// <summary>コンストラクタ</summary>
 		/// <param name="_Obj">本クラスで操作する設定データ</param>
-		public SettingProcessXmlForm(in Setting _Obj)
+		public SettingProcessXmlForm(in Setting.Setting _Obj)
 		{
 			this.SetSetting(_Obj ?? throw new ArgumentNullException(nameof(_Obj)));
 		}
@@ -49,7 +49,7 @@ namespace CreateFCTcode
 		//--------------------------------------------------------------------------------------------------//
 		/// <summary></summary>
 		/// <param name="_Obj">本クラスで操作する設定データ</param>
-		public override void SetSetting(in Setting _Obj)
+		public override void SetSetting(in Setting.Setting _Obj)
 		{
 			if (_Obj is null) throw new ArgumentNullException(nameof(_Obj));
 			if (!(_Obj is SettingForm)) throw new ArgumentException("Invalid type inputed. Input type: [" + _Obj.GetType().Name + "].", nameof(_Obj));
@@ -106,7 +106,7 @@ namespace CreateFCTcode
 		// property
 		//--------------------------------------------------------------------------------------------------//
 		/// <summary>設定データクラスを返す</summary>
-		public override Setting Setting => _SettingForm;
+		public override Setting.Setting Setting => _SettingForm;
 
 		/// <summaryフォーム上の設定の要素名</summary>
 		public override string SettingName => _SettingForm.SettingName;

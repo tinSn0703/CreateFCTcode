@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionCreateNvmCode.cs" />
     <Compile Include="ApplicationAction.cs" />
     <Compile Include="ApplicatonMode.cs" />
     <Compile Include="Form1.cs">
@@ -56,12 +57,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Setting.cs" />
-    <Compile Include="SettingFileController.cs" />
-    <Compile Include="SettingFileXmlController.cs" />
+    <Compile Include="SettingCreateNvmCode.cs" />
     <Compile Include="SettingForm.cs" />
-    <Compile Include="SettingProcess.cs" />
-    <Compile Include="SettingProcessXml.cs" />
     <Compile Include="SettingProcessXmlForm.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -87,6 +84,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Setting\Setting.csproj">
+      <Project>{dfb05b0e-121c-4cae-99d3-7162c5ffa353}</Project>
+      <Name>Setting</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

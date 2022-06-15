@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CreateFCTcode
 {
 	/// <summary>アプリのフォーム上の設定</summary>
-	public class SettingForm : Setting
+	public class SettingForm : Setting.Setting
 	{
 		//--------------------------------------------------------------------------------------------------//
 		// field
