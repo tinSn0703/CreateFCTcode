@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <Form 
+    input="D:\workspace\作業場所_メイン\AZV(VRV6国内MoC)\FCT治具図面\FCTK03118_FCT治具ピン振り回路図\AZV_FCTK03118_-.xml" 
+    output="D:\workspace\作業場所_メイン\AZV(VRV6国内MoC)\FCT治具図面\FCTP03120_FCT治具ピン配置図\AZV_FCTP03120_-.vsd" 
+    reference="" 
+    mode="Draw FCTP" />
+  <NvmWrite input="" output="C:\Users\nsowa.DKR\Desktop">
+    <Address min="0000" max="FFFF" block=3/>
+    <Code name="MFTX" comment="FLASH制御書込み"/>
+    <Command name="K06" min_byte=1 max_byte=64 is_reverse="1"/>
+  </NvmWrite>
+</settings>
