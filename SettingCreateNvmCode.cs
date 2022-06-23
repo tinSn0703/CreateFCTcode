@@ -133,13 +133,13 @@ namespace CreateFCTcode
 		public int EndWriteAddress { get; set; }
 
 		/// <summary>書き込みコマンドで一度に書き込めるアドレスの最小バイト数</summary>
-		public UInt16 MinWriteByteNum { get; set; }
+		public ushort MinWriteByteNum { get; set; }
 
 		/// <summary>書き込みコマンドで一度に書き込めるアドレスの最大バイト数</summary>
-		public UInt16 MaxWriteByteNum { get; set; }
+		public ushort MaxWriteByteNum { get; set; }
 
 		/// <summary>書き込みコマンドを実行できる最大ブロック数</summary>
-		public UInt16 MaxWriteBlockNum { get; set; }
+		public ushort MaxWriteBlockNum { get; set; }
 
 		/// <summary>書き込みコマンドでのアドレス指定時、H/Lを反転させますか?</summary>
 		public bool IsReverseAddress { get; set; }
